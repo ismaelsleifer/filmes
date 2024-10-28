@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,8 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+
+
+
 # SECURITY WARNING: keep the secret key used in production secret!
+
+TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 SECRET_KEY = 'django-insecure-wjovk9_uq5igi%5o8o%n_5&fw5p*q#6g#b)ji_z$dc&xb5_3*2'
+if TOKEN_CSRF:
+    SECRET_KEY = TOKEN_CSRF
+    
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,7 +96,6 @@ DATABASES = {
 }
 
 import dj_database_url
-import os
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 if DATABASE_URL:
