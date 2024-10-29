@@ -30,7 +30,7 @@ print('token csrf')
 print(TOKEN_CSRF)
 if TOKEN_CSRF:
     SECRET_KEY = TOKEN_CSRF
-    CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app', 'http://noble-comfort-production.up.railway.app', 'noble-comfort-production.up.railway.app']
+    CSRF_TRUSTED_ORIGINS = ['https://web-production-2311.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-wjovk9_uq5igi%5o8o%n_5&fw5p*q#6g#b)ji_z$dc&xb5_3*2'
 
@@ -38,7 +38,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['noble-comfort-production.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['web-production-2311.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
