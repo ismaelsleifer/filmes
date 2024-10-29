@@ -29,7 +29,7 @@ TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
     SECRET_KEY = TOKEN_CSRF
     print(TOKEN_CSRF)
-    CSRF_TRUSTED_ORIGINS = ['https://noble-comfort-production.up.railway.app']
+    CSRF_TRUSTED_ORIGINS = ['https://noble-comfort-production.up.railway.app', 'http://noble-comfort-production.up.railway.app', 'noble-comfort-production.up.railway.app']
 else:
     SECRET_KEY = 'django-insecure-wjovk9_uq5igi%5o8o%n_5&fw5p*q#6g#b)ji_z$dc&xb5_3*2'
 
