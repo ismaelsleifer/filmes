@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_CSRF = os.getenv('TOKEN_CSRF')
 if TOKEN_CSRF:
     SECRET_KEY = TOKEN_CSRF
-    CSRF_TRUSTED_ORIGINS = ['http://noble-comfort-production.up.railway.app']
+    CSRF_TRUSTED_ORIGINS = ['http://noble-comfort-production.up.railway.app/']
 else:
     SECRET_KEY = 'django-insecure-wjovk9_uq5igi%5o8o%n_5&fw5p*q#6g#b)ji_z$dc&xb5_3*2'
 
@@ -36,7 +36,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://noble-comfort-production.up.railway.app']
+ALLOWED_HOSTS = ['http://noble-comfort-production.up.railway.app/']
 
 
 # Application definition
