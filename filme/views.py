@@ -66,7 +66,7 @@ class PaginaPerfil(LoginRequiredMixin, UpdateView):
     model = Usuario
     fields = ['first_name', 'last_name', 'email']
     def get_success_url(self):
-        return reverse('filme:holmefilmes')
+        return reverse('filme:homefilmes')
 
 class CriarConta(FormView):
     template_name = 'criarconta.html'
