@@ -36,7 +36,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['noble-comfort-production.up.railway.app/']
+ALLOWED_HOSTS = ['noble-comfort-production.up.railway.app']
 
 
 # Application definition
